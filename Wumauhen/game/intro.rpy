@@ -14,6 +14,7 @@ label intro:
 
     narrator "You blearily open your eyes."
 
+    stop sound fadeout 1.0
     scene bg classroom with fade
 
     narrator "The heck?"
