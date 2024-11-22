@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/endings.rpy", line 151: expected 'simple_expression' not found.
-    show single_n at with dissolve
-                     ^
+File "game/script.rpy", line 5: expected statement.
+    import time
+               ^
+
+File "game/script.rpy", line 6: expected statement.
+    import asyncio
+                  ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Thu Nov 21 20:53:35 2024
+Fri Nov 22 16:19:32 2024

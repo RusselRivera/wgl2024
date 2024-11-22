@@ -18,9 +18,9 @@ label intro:
 
     narrator "The heck?"
 
-    $ wu.name = "???"
-    $ mauh.name = "???"
-    $ n.name = "???"
+    $ wu.name = "[[???]"
+    $ mauh.name = "[[???]"
+    $ n.name = "[[???]"
 
     show mauh at shake, center with dissolve
     mauh "Oh!!! {image=props/ru.png} ok??!"
@@ -35,10 +35,10 @@ label intro:
 
     wu "You're fine now."
 
-    $ saturation = 0
+    $ moveBW()
     show n at left with dissolve
     n "…"
-    $ saturation = 1
+    $ moveColor()
 
 
     mauh "Hey, anyways, glad you’re awake, um, err, sorry, I’m forgetting your name!"
@@ -68,9 +68,10 @@ label intro:
 
     wu "Gasp!"
 
-    play sound "audio/Intro/cricket.mp3" volume 0.8
+    play sound "audio/Intro/cricket.mp3" volume 0.6
     n "…"
     
+    stop sound fadeout 1.0
     show n at shake
     show mauh at shake
     show wu at shake
@@ -84,8 +85,8 @@ label intro:
 
     play music "audio/Intro/upbeat bgm.mp3"
 
-    $ wu.name = "Wu"
-    $ mauh.name = "Mauh"
+    $ wu.name = "[[Wu]"
+    $ mauh.name = "[[Mauh]"
 
     show n at left
     show wu at center
@@ -102,6 +103,7 @@ label intro:
     show mauh at bounce
     mauh "And lastly…"
 
+    $ moveBW()
     n "…"
 
     player "Does she (they…? it…?)… talk?"
@@ -109,11 +111,12 @@ label intro:
     n "... ({i}nods{/i})"
 
     player "...?"
+    $ moveColor()
 
     show mauh at bounce
     mauh "That’s N. And that’s the three of us!"
     
-    $ n.name = "N"
+    $ n.name = "[[N]"
 
     player "Er.. wait, she didn’t even-"
 
@@ -121,6 +124,7 @@ label intro:
 
     show wu at bounce
     wu "Ah, there's the bell. We should probably go home now. Or else..."
+    stop sound fadeout 1.0
 
     player "({i}Or else what?!?!? Why the heck isn’t anyone explaining anything?!{/i})"
 
@@ -149,7 +153,8 @@ label q_find_date:
             return
 
         "Shake your head, \"I don’t think I want to\"":
-            narrator "This option is unavailable. Choose another option."
+            narrator "[no_vals[no_counter]]"
+            $ no_counter = min(5, no_counter + 1)
             call q_find_date from _call_q_find_date_1
 
             return

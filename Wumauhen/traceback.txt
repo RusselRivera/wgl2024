@@ -1,23 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 146, in script call
-    call wake_up from _call_wake_up
-  File "game/script.rpy", line 164, in script call
-    call wu_day from _call_wu_day
-  File "game/days.rpy", line 62, in script
-    wumauh "Not bad!!"
-SyntaxError: unexpected character after line continuation character (<none>, line 1)
+  File "game/script.rpy", line 182, in script call
+    call intro from _call_intro
+  File "game/intro.rpy", line 96, in script
+    mauh "Great! Oh, and oops (character shake), I forgot to introduce myself silly me. I’m Mauh, your friendly neighborhood happy-go-lucky popular girl! And this is..."
+NameError: name 'Mauh' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 146, in script call
-    call wake_up from _call_wake_up
-  File "game/script.rpy", line 164, in script call
-    call wu_day from _call_wu_day
-  File "game/days.rpy", line 62, in script
-    wumauh "Not bad!!"
+  File "game/script.rpy", line 182, in script call
+    call intro from _call_intro
+  File "game/intro.rpy", line 96, in script
+    mauh "Great! Oh, and oops (character shake), I forgot to introduce myself silly me. I’m Mauh, your friendly neighborhood happy-go-lucky popular girl! And this is..."
   File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\ast.py", line 2573, in execute
     Say.execute(self)
   File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\ast.py", line 615, in execute
@@ -36,17 +32,14 @@ Full traceback:
     raise e
   File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\substitutions.py", line 78, in interpolate
     value = renpy.python.py_eval(code, {}, scope)
-  File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: unexpected character after line continuation character (<none>, line 1)
+  File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'Mauh' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24111502
 Wumauhen 1.0
-Thu Nov 21 21:34:38 2024
+Fri Nov 22 17:12:23 2024

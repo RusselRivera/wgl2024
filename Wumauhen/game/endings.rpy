@@ -24,11 +24,12 @@ label ending_wu:
 
     wu "I would say I'm flattered, but I am the most eligible, aren't I?"
     player "There’s no other person I could spend the festival with."
-    show wu at bounce
+    show wu blush at bounce
     wu "You flatter me."
+    show wu kimono
     narrator "In very expensive silk clothing, provided by Wu’s multi-level-marketing pyramid scheme Chaebol inheritance, you both walk hand-in-hand through the festival booths."
     
-    show wu at bounce, center
+    show wu kimono at bounce, center
     wu "Pick anything, i'll pay for it."
     player "(Wow, it seemed like only 15 real-life minutes ago that I was worrying about being single for the rest of my life… and being hit by a truck. Hey, are we still glossing over that?)"
     scene bg kabedon_before with fade
@@ -48,12 +49,12 @@ label ending_wu:
 label ending_mauh:
     scene bg festival with fade
     play music "audio/Mauh's Ending/upbeat bgm.mp3"
-    show mauh at bounce, center with dissolve
+    show mauh happy at bounce, center with dissolve
 
     mauh "Oh, oh really.. Me?!"
     narrator "Mauh looks extremely ecstatic that you have chosen her."
     player "You were always kind to me from the beginning. This was the only logical choice."
-    show mauh at bounce, center
+    show mauh happy at bounce, center
     mauh "Ah, [YN], I’m so over the moon!"
     narrator "You and Mauh go hand-in-hand through the festival. It’s a full moon tonight, and the night sky is clear save for some bright, twinkling stars."
     show mauh at bounce, center
@@ -64,13 +65,17 @@ label ending_mauh:
     mauh "I know just the spot, actually."
     narrator "Mauh leads you toward a clearing, with only a few couples loitering about. She seems to be a little nervous regarding something though."
     player "Hey, everything alright?"
-    show mauh at bounce, center
+    show mauh flustered at bounce, center
     mauh "Yeah, of course.. It’s just that.. With this setting, it’s almost perfect for.."
     play sound "audio/Mauh's Ending/fireworks.mp3"
+    scene bg fireworks
+    show mauh flustered
     narrator "The fireworks seem to go off instantly, surprising you both."
     player "Sorry, the fireworks cut you off. What were you trying to say?"
+    
+    stop sound fadeout 1.0
     narrator "It looks like Mauh takes a deep breath before carefully considering what she is going to say to you\n…"
-    show mauh at shake, center
+    show mauh flustered at shake, center
     stop music fadeout 1.0
     mauh "The- the thing is..!\n            I’ve actually been interested in you for a long time…!"
     narrator "There’s a foreboding feeling in your gut.."
@@ -83,10 +88,12 @@ label ending_mauh:
     player "Oh my god.\n(If the truck didn’t kill me already, this would’ve done it.)"
     narrator "YOU WIN!\n                               ({size=-8}…? Do we count this as a win..?{/size})"
 
+    return
+
 label ending_n:
     scene bg festival with fade
     play music "audio/N's Ending/murmurs.mp3"
-    show n at center with dissolve
+    show n blush at center with dissolve
 
     n "… ({i}looks fond{/i})"
     player "Thanks for going with me to the summer festival…"
@@ -96,7 +103,7 @@ label ending_n:
     narrator "You and N walk, closely together, towards the ferris wheel."
     
     scene bg wheel with fade
-    show n at center with dissolve
+    show n blush at center with dissolve
     player "They say something special happens at the top of the ferris wheel. Can you believe that?"
     n "…"
     narrator "You and N board the cart in the ferris wheel. It’s a silent ride up, but the silence is not unwelcome."
@@ -167,12 +174,18 @@ label ending_women:
     narrator "I really didn’t think you had it in you…"
     player "(What’s that supposed to mean??)"
     narrator "Well, I guess, here you go. Since you got her fair and square."
+    
+    show woman with fade
     play sound "audio/Women Ending/WOW.mp3"
+    show woman at bounce
     wumauhn "You did it, [YN], you won THE woman!"
     player "What."
+    show woman at bounce
     wumauhn "See, maybe you didn’t realize it all along, but despite all of our individual characters’ differences, we are all women in the end! And isn’t that wonderful, the power of womanhood!"
     player "What.."
+    show woman at bounce
     wumauhn "Thank you for choosing us, [YN]! ♡"
+    scene bg woman with fade
     narrator "Woman!"
 
     return
