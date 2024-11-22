@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 61: end of line expected.
-    show muah at right with move 1.0
-                                 ^
+File "game/endings.rpy", line 151: expected 'simple_expression' not found.
+    show single_n at with dissolve
+                     ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Tue Nov 19 12:26:31 2024
+Thu Nov 21 20:53:35 2024
