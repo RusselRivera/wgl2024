@@ -27,6 +27,7 @@ label wu_day:
             show wu at bounce
             wu "Ah, I guess you're entitled to your own opinions..."
             $ wu_score -= 1
+            $ flag_perfect = False
 
     show mauh at bounce
     mauh "Well, I guess we should get chocolatier-ing!"
@@ -101,6 +102,7 @@ label wu_day:
 
 
             $ wu_score -= 1
+            $ flag_perfect = False
             $ flag_trash = True
 
     scene bg sakura with fade
@@ -122,8 +124,12 @@ label wu_day:
     show mauh at bounce
     mauh "Ah.. yeah.. This is usually how it goes…"
 
+label disrupt:
     menu:
-        "Disrupt the crowd and pull Wu away." if not flag_trash:
+        "Disrupt the crowd and pull Wu away.":
+            if flag_trash:
+                "This option is locked!"
+                jump disrupt
             hide n with dissolve
             hide mauh with dissolve
             show wu at center with move
@@ -156,6 +162,7 @@ label wu_day:
                     narrator "Wu looks slightly distraught that you had interrupted her. But, she realizes her friends have been waiting for her, and nods her head resolutely.\nYou both head back to where Mauh and N are."
 
                     $ wu_score -= 1
+                    $ flag_perfect = False
                     
         "Stand and wait for 2 more hours.":
             narrator "The street lamps are starting to turn on now. As the last remaining girls get in their confessions, the three of you behind the corner creep out from your hiding place."
@@ -234,7 +241,7 @@ label mauh_day:
     narrator "This goes for quite a while. The current score is 24-3. Really, Wu’s just one point away, so you have to make this count (Not that you really have a chance after, anyway…)"
     show mauh at bounce
     mauh "Come on guys, it’s match point! We really have to give it our all here!"
-    hide n with fade
+    show n at ball_hit
     narrator "When Wu serves it to your side, N receives the ball.\nWith her head.\n…\nShe’s out cold now!"
     narrator "It’s headed towards your direction, and a very important deciding factor from here."
 
@@ -260,9 +267,10 @@ label mauh_day:
         play music "audio/Mauh's Storyline/beach bgm.mp3"
     play sound "audio/Mauh's Storyline/coach whistle.mp3"
     show wu at bounce
+    hide n 
     wu "Nice try, ladies! That really was an exhausing match. (There is no visible sweat on her)"
     show mauh tired at bounce
-    show n worry
+    show n worry at left with dissolve
     mauh "Ah.. what a match.. At least we got to play with you this time, [YN]!"
     n ". . . ({i}still looking haggard{/i})"
     show wu at bounce
@@ -394,6 +402,7 @@ label n_day:
                     show n
                 "\"Nothing that great.\"":
                     $ n_score -= 1
+                    $ flag_perfect = False
                     n "…"
                     show mauh at bounce
                     mauh "Come on now, I thought it was fantastic N."
@@ -454,6 +463,7 @@ label n_day:
 
         "\"Do you ever speak?\"":
             $ n_score -= 1
+            $ flag_perfect = False
             narrator "N seems to grimace at your intrusive questions."
             show n angry
             n "… (irritated)"
@@ -500,6 +510,7 @@ label n_day:
             narrator "The scene fades to black."
         "\"Ah, sorry N. I really have to rush home…\"":
             $n_score -= 1
+            $ flag_perfect = False
             n "… ({i}motions for you to go, with no worries{/i})"
             player "Really sorry again.."
             narrator "The scene fades to black."

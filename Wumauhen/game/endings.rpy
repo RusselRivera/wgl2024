@@ -12,7 +12,7 @@ label choose_ending:
                 call ending_mauh from _call_ending_mauh
             "N" if n_score == max(wu_score, mauh_score, n_score):
                 call ending_n from _call_ending_n
-            "All three" if wu_score == mauh_score and mauh_score == n_score:
+            "All three" if flag_perfect:
                 call ending_women from _call_ending_women
 
     return

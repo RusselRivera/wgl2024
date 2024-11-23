@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 5: expected statement.
-    import time
-               ^
-
-File "game/script.rpy", line 6: expected statement.
-    import asyncio
-                  ^
+File "game/script.rpy", line 164: property 'yoffset' is given a value more than once
+    easein .175 yoffset -1000 yoffset -1000
+                                           ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Fri Nov 22 16:19:32 2024
+Fri Nov 22 18:18:31 2024

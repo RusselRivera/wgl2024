@@ -2,18 +2,18 @@
 
 While running game code:
   File "game/script.rpy", line 182, in script call
-    call intro from _call_intro
-  File "game/intro.rpy", line 96, in script
-    mauh "Great! Oh, and oops (character shake), I forgot to introduce myself silly me. I’m Mauh, your friendly neighborhood happy-go-lucky popular girl! And this is..."
-NameError: name 'Mauh' is not defined
+    call ending_women
+  File "game/endings.rpy", line 181, in script
+    wumauhn "You did it, [YN], you won THE woman!"
+NameError: name 'WuMauhN' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 182, in script call
-    call intro from _call_intro
-  File "game/intro.rpy", line 96, in script
-    mauh "Great! Oh, and oops (character shake), I forgot to introduce myself silly me. I’m Mauh, your friendly neighborhood happy-go-lucky popular girl! And this is..."
+    call ending_women
+  File "game/endings.rpy", line 181, in script
+    wumauhn "You did it, [YN], you won THE woman!"
   File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\ast.py", line 2573, in execute
     Say.execute(self)
   File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\ast.py", line 615, in execute
@@ -37,9 +37,9 @@ Full traceback:
   File "C:\Users\Russel\Downloads\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
   File "<none>", line 1, in <module>
-NameError: name 'Mauh' is not defined
+NameError: name 'WuMauhN' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24111502
 Wumauhen 1.0
-Fri Nov 22 17:12:23 2024
+Fri Nov 22 18:01:31 2024

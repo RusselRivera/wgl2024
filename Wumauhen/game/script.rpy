@@ -6,12 +6,12 @@
 
 define player = Character("{color=#1E1E1E}[[[YN]]{/color}", what_size=32)
 define narrator = Character(color="#1E1E1E")
-define wu = Character("[[[Wu]]", color="#D362A4", what_font="great_vibes.ttf", what_size=50, who_outlines=[(1, "#444444", 0, 0)])
-define mauh = Character("[[[Mauh]]", color="#FF9A56", who_outlines=[(1, "#444444", 0, 0)])
-define n = Character("[[[N]]", color="#000000")
-define wumauh = Character("[[[Wu and Mauh]]")
-define wun = Character("[[[Wu and N]]")
-define wumauhn = Character("[[[WuMauhN]]")
+define wu = Character("[[Wu]", color="#D362A4", what_font="great_vibes.ttf", what_size=50, who_outlines=[(1, "#444444", 0, 0)])
+define mauh = Character("[[Mauh]", color="#FF9A56", who_outlines=[(1, "#444444", 0, 0)])
+define n = Character("[[N]", color="#000000")
+define wumauh = Character("[[Wu and Mauh]")
+define wun = Character("[[Wu and N]]")
+define wumauhn = Character("[[WuMauhN]")
 
 image wu = DynamicDisplayable(bwImage, "characters/wu.png")
 image mauh = DynamicDisplayable(bwImage, "characters/mauh.png")
@@ -55,6 +55,7 @@ init python:
         "..."
     ]
 
+    flag_perfect = True
     saturation = 1.0
     wu_done = False
     wu_score = 0
@@ -162,6 +163,9 @@ transform bounce:
 transform spotlight:
     xalign 0.20 yalign 0.0
 
+transform ball_hit:
+    easein .175 yoffset -1000 xoffset -1000
+
 transform audience_l:
     xalign 0.70 yalign 0.0
 
@@ -178,6 +182,11 @@ transform audience_r:
 
 label start:
     # These display lines of dialogue.
+    # call ending_women from _call_ending_women_1
+    # call ending_single from _call_ending_single_1
+    # call ending_wu from _call_ending_wu_1
+    # call ending_mauh from _call_ending_mauh_1
+    # call ending_n from _call_ending_n_1
 
     call intro from _call_intro
 
